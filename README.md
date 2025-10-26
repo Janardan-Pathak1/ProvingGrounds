@@ -17,7 +17,7 @@ Before you begin, ensure you have the following installed on your Windows machin
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Janardan-Pathak1/ProvingGrounds.git
     cd proving-grounds
     ```
 
@@ -56,7 +56,7 @@ Before you begin, ensure you have the following installed on your Windows machin
         ```
     *   Import the database schema and data from the `database.sql` file:
         ```bash
-        psql -U postgres -d ProvingGrounds -f ../database.sql
+        psql -U <user> -d ProvingGrounds -f ../database.sql
         ```
         You will be prompted for the `postgres` user password.
 
@@ -67,10 +67,10 @@ Before you begin, ensure you have the following installed on your Windows machin
     *   In the `backend` directory, you will find a `.env` file. This file contains the environment variables for the application.
     *   The default database connection settings are:
         ```
-        PGUSER=postgres
+        PGUSER=
         PGHOST=localhost
         PGDATABASE=ProvingGrounds
-        PGPASSWORD=Passw0rd!
+        PGPASSWORD=
         PGPORT=5432
         ```
     *   If you used a different password for the `postgres` user during PostgreSQL installation, you need to update the `PGPASSWORD` variable in the `.env` file.
