@@ -1,0 +1,59 @@
+/* Basic styles for the application */
+:root {
+  --primary-color: #60a5fa;
+  --primary-color-hover: #3b82f6;
+  --text-color: #e2e8f0;
+  --background-color: #1f2937;
+  --background-color-light: #374151;
+  --background-color-lighter: #4b5563;
+  --border-color: #4b5563;
+  --success-color: #34d399;
+  --error-color: #ef4444;
+}
+
+.dark-theme {
+  --primary-color: #60a5fa;
+  --primary-color-hover: #3b82f6;
+  --text-color: #e2e8f0;
+  --background-color: #1f2937;
+  --background-color-light: #374151;
+  --background-color-lighter: #4b5563;
+  --border-color: #4b5563;
+}
+
+.cyberpunk-theme {
+  --primary-color: #fde047;
+  --primary-color-hover: #facc15;
+  --text-color: #fde047;
+  --background-color: #000000;
+  --background-color-light: #1e1e1e;
+  --background-color-lighter: #333333;
+  --border-color: #fde047;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color); /* Use variable */
+  color: var(--text-color); /* Use variable */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Ensure the main App container takes full height */
+#root, html, body {
+  height: 100%;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

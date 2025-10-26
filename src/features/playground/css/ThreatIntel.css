@@ -1,0 +1,124 @@
+/* ThreatIntel Specific Styles */
+.threat-intel-container {
+  padding: 1.5rem;
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.threat-intel-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #60a5fa;
+  margin-bottom: 1.5rem;
+}
+
+.threat-intel-section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #374151;
+  border-radius: 0.5rem;
+}
+
+.threat-intel-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #e5e7eb;
+  margin-bottom: 1rem;
+}
+
+.threat-intel-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+  .threat-intel-input-group {
+    flex-direction: row;
+  }
+}
+
+.threat-intel-input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #4b5563;
+  border: 1px solid #6b7280;
+  color: #e0e0e0;
+  outline: none;
+}
+
+.threat-intel-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.5);
+}
+
+.threat-intel-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #2563eb; /* blue-600 */
+  color: #ffffff;
+  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.threat-intel-button:hover {
+  background-color: #1d4ed8; /* blue-700 */
+}
+
+.threat-intel-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.threat-intel-file-input {
+  display: block;
+  width: 100%;
+  font-size: 0.875rem;
+  color: #d1d5db;
+}
+
+.threat-intel-file-input::file-selector-button {
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: #bfdbfe; /* blue-50 */
+  color: #1d4ed8; /* blue-700 */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.threat-intel-file-input::file-selector-button:hover {
+  background-color: #dbeafe; /* blue-100 */
+}
+
+.threat-intel-file-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.threat-intel-file-info {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.threat-intel-results {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #374151;
+  border-radius: 0.5rem;
+}
+
+.threat-intel-pre {
+  background-color: #111827; /* gray-900 */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  overflow-x: auto;
+}

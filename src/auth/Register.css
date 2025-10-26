@@ -1,0 +1,203 @@
+:root {
+  --register-bg: url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?ixlib=rb-4.0.3'); /* Replace with desired wallpaper */
+  --card-bg: rgba(0, 0, 0, 0.7);
+  --text: #eee;
+  --input-bg: #222;
+  --primary: #0bf;
+  --error: #f66;
+  --success: #6f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+}
+
+.register-background {
+  display: flex;               /* Flex container */
+  justify-content: center;     /* Center horizontally */
+  align-items: flex-start;     /* Align to top instead of center */
+  flex-wrap: wrap;             /* Allow wrapping on small screens */
+  min-height: 100vh;           /* Ensure full height, prevent overflow */
+  padding-top: 10vh;           /* Add space from the top to move the card down */
+  background-color: #0a0a1a;   /* Project's background color */
+  overflow: auto;              /* Allow scrolling if content overflows on small screens */
+  position: relative;          /* For relative positioning of children */
+  min-width: 0;                /* Prevent horizontal overflow */
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Your gradient */
+}
+
+.register-card {
+  width: 90%; /* Make it responsive */
+  max-width: 360px; /* Limit max width */
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  text-align: center;
+  margin-top: 5vh; /* Positive margin to push down slightly from the padded top */
+  margin-right: 2rem; /* Gap between card and requirements box */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Your shadow */
+}
+
+.register-card h2 {
+  margin-bottom: 1rem;
+  word-wrap: break-word; /* Ensure long words break */
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.6rem;
+  background: var(--input-bg);
+  border: none;
+  border-radius: 4px;
+  color: var(--text);
+}
+
+.btn {
+  width: 100%;
+  padding: 0.7rem;
+  background: var(--primary);
+  border: none;
+  border-radius: 4px;
+  color: #000;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  background-color: #007bff; /* Your button color */
+}
+
+.btn:hover {
+  background: #08a;
+}
+
+.error {
+  color: var(--error);
+  margin: 0.5rem 0;
+}
+
+.success {
+  color: var(--success);
+  margin: 0.5rem 0;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin: 0.8rem 0;
+}
+
+.links a {
+  color: var(--primary);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.input-group.password-group {
+  position: relative;
+}
+
+/* Style the input to leave space for the button */
+.input-group.password-group input {
+  padding-right: 2.5rem; /* Space for the button */
+}
+
+/* Toggle button styles */
+.toggle-password {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%; /* Align vertically with input (adjust based on your input height) */
+  transform: translateY(20%); /* Center vertically */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text); /* Match text color */
+  font-size: 1.2rem; /* Size of emoji/icon */
+  padding: 0;
+}
+
+.toggle-password:hover {
+  color: var(--primary); /* Hover effect */
+}
+
+/* Password Requirements Box (now a flex sibling to the card) */
+.password-requirements-box {
+  width: 280px; /* Fixed width for the box */
+  background: var(--card-bg); /* Match card background */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  margin-top: 5vh; /* Align top with register card */
+  align-self: flex-start; /* Align to top */
+}
+
+.password-requirements-box h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.password-requirements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.password-requirements li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth tick change */
+}
+
+.password-requirements li.met {
+  color: #28a745; /* Green for met */
+  transform: scale(1.05); /* Slight zoom for emphasis */
+}
+
+.password-requirements li.not-met {
+  color: #dc3545; /* Red for unmet */
+}
+
+.password-requirements li::before {
+  content: '';
+  margin-right: 0.5rem; /* Space for icons */
+}
+
+/* Responsive: Stack below on small screens */
+@media (max-width: 900px) {
+  .register-background {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .register-card {
+    margin-right: 0;
+    margin-bottom: 1rem; /* Space below card before box */
+  }
+
+  .password-requirements-box {
+    width: 100%; /* Full width */
+    margin-top: 0; /* No extra top margin */
+  }
+}

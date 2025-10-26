@@ -1,0 +1,63 @@
+.success-message-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.success-message-content {
+  background: var(--background-color-light);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: var(--text-color);
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 0.3s ease-out;
+  border: 1px solid var(--border-color);
+}
+
+.success-icon {
+  color: var(--success-color);
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.success-icon svg {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.success-message-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.success-close-button {
+  background: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.success-close-button:hover {
+  background: var(--primary-color-hover);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

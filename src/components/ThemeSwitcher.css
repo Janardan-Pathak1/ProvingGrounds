@@ -1,0 +1,16 @@
+.theme-switcher {
+  margin-top: 20px;
+}
+
+.theme-select-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-switcher select {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

@@ -1,0 +1,117 @@
+/* Help Page Specific Styles */
+.help-page-container {
+  padding: 100px 20px 40px; /* Adjust for fixed navbar height and add padding */
+  min-height: 100vh;
+  background-color: #0a0a1a;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.page-title {
+  font-size: 2.8em;
+  color: #00bfff;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+  text-align: center;
+}
+
+.help-section {
+  background-color: #1a1a2e;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+  border: 1px solid #2a2a4a;
+  width: 100%;
+  max-width: 900px;
+  transition: all 0.3s ease-in-out;
+}
+
+.help-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 191, 255, 0.2);
+}
+
+.section-title {
+  font-size: 2em;
+  color: #00ff99;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(0, 255, 153, 0.5);
+  border-bottom: 2px solid #00ff99;
+  padding-bottom: 10px;
+}
+
+.help-section p,
+.help-section li {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #d1d5db;
+}
+
+.help-section a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.help-section a:hover {
+  color: #00ff99;
+  text-decoration: underline;
+}
+
+/* FAQ Specific Styles */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  background-color: #2a2a4a;
+  border-radius: 8px;
+  border: 1px solid #3a3a5a;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #00bfff;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-size: 1.2em;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.faq-question:hover {
+  background-color: #3a3a5a;
+}
+
+.faq-icon {
+  font-size: 1.5em;
+  color: #00bfff;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  padding: 0 20px 20px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #b0b0c0;
+  background-color: #2a2a4a;
+  border-top: 1px solid #3a3a5a;
+}
